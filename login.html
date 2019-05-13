@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<form  class="form-horizontal" id="registerForm"  method= "POST"  enctype="multipart/form-data">
+<form method="POST" action="/admin/postlogin" id="loginform" class="form-horizontal">
 <fieldset>
 
 <!-- Form Name -->
@@ -22,26 +22,16 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Username</label>  
   <div class="col-md-4">
-  <input id="username" name="username" type="text" placeholder="username" class="form-control input-md">
+  <input id="username" name="username" type="text" placeholder="username" class="form-control input-md" >
   <span class="help-block">Please enter username</span>  
   </div>
 </div>
-
-
-<div class="form-group">
-  <label class="col-md-4 control-label" for="textinput">Address</label>  
-  <div class="col-md-4">
-  <input id="address" name="address" type="text" placeholder="username" class="form-control input-md" >
-  <span class="help-block">Please enter you address</span>  
-  </div>
-</div>
-
 
 <!-- Password input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="Password">password</label>
   <div class="col-md-4">
-    <input id="password" name="password" type="password" placeholder="password" class="form-control input-md">
+    <input id="password" name="password" type="password" placeholder="password" class="form-control input-md" >
     <span class="help-block">Please enter password</span>
   </div>
 </div>
@@ -50,19 +40,17 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit">submit</label>
   <div class="col-md-4">
-    <button id="submit" name="submit"  class="btn btn-info">Submit</button>
+    <button id="submit" name="submit" class="btn btn-info">Submit</button>
   </div>
 </div>
 
 </fieldset>
 </form>
 
-<<!-- button id="testj" > click</button>
 
-<button id="testjq" class="jclass"> Test Some Jquery</button>
- -->
+
+
 </body>
-
 <script type="text/javascript" src="resources/js/jquery-3.3.0.min.js"></script>
 <script type="text/javascript" src="resources/js/custom.js"></script>
 
