@@ -62,7 +62,9 @@ $('#loginForm').submit(function(event){
 
 				success : function(result,status){
 
-					$('#message').html(result.message)
+					$('#message').html(result.message);
+					window.location.href = "usersdashboard.html";
+
 
 				},
 				error : function (jqXHR,status){ 
@@ -93,7 +95,10 @@ $.ajax({
 						// console.log(key);
 						console.log(result[key].username);
 
-$('#usersData').append('<li class="list-group-item">'+result[key].username+'</li><button type="button" class="btn btn-primary">Primary</button>')
+$('#usersData')
+.append('<li class="list-group-item">'
+	+result[key].username+
+	'</li><button type="button" class="btn btn-primary">Primary</button>')
 
 					}
 
