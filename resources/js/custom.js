@@ -18,7 +18,6 @@ $(document).ready(
 				method : 'POST',
 				contentType: 'application/json',
 				data: JSON.stringify(myFormData),
-
 				success : function(result,status){
 					console.log(result);
 					console.log(status);
@@ -28,6 +27,7 @@ $(document).ready(
 				// $('#message').html(result.message);
 				// $('#lform').show();
 				// $('#rform').hide();
+				window.localStorage.setItem('token','123')
 
 				},
 				error : function (jqXHR,status){ 
@@ -58,12 +58,16 @@ $('#loginForm').submit(function(event){
 				url: 'http://localhost:3001/v1/auth',
 				method : 'POST',
 				contentType: 'application/json',
+								// headers: { 'Authorization' : window.localStorage.getItem('token')},
+
 				data: JSON.stringify(myFormData),
 
 				success : function(result,status){
-
+// console.log(result);
 					$('#message').html(result.message);
-					window.location.href = "usersdashboard.html";
+					console.log(result.token);
+// window.localStorage.setItem('token',result.token);
+					// window.location.href = "usersdashboard.html";
 
 
 				},
