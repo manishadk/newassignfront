@@ -88,6 +88,7 @@ $(document).ready(function() {
 		url: 'http://localhost:3001/v1/users/',
 		method: 'GET',
 		dataType: 'json',
+		headers : { authorization : 'Bearer'+window.localStorage.getItem('token') },
 		success: function(result, status) {
 			console.log(result);
 
